@@ -7,6 +7,6 @@ order: 1
 <!--- > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
 #{: .prompt-tip } -->
 
-# Mark Giovinazzi (he/him/his)
+# Mark Giovinazzi
 
-I am a PhD Candidate at the University of Pennsylvania.
+My name is Mark (he/him/his). I'm currently a PhD Candidate at the Univeristy of Pennsylvania, and will be applying for post-docs during the Fall '23 cycle!
