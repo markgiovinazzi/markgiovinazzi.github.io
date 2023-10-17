@@ -41,7 +41,7 @@
         <h2>Highlighted Talks</h2>
         <div class="row">
             <article class="col-6 col-12-xsmall work-item">
-                <a onclick="playVideo(1);">
+                <a href="#" onclick="playVideo(1);">
                     <img src="../images/talks/PennGrad.png" alt="Penn Grad Talks" style="max-width: 100%; height: auto;"/>
                 </a>
                 <h3>From Zero to Five Thousand: the Current Census of Exoplanets</h3>
@@ -55,7 +55,7 @@
                 <p>Astronomy on Tap, 2023</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-                <a onclick="playVideo(3);">
+                <a href="#" onclick="playVideo(3);">
                     <img src="../images/talks/The Exciting World of Exoplanets Cover.jpeg" alt="Your Third Talk" style="max-width: 100%; height: auto;" />
                 </a>
                 <h3>Your Third Talk</h3>
@@ -69,21 +69,6 @@
             <li><a href="#" class="button">Full Portfolio</a></li>
         </ul>
     </section>
-
-    <script>
-        function playVideo(videoNumber) {
-            var videoContainer = document.querySelector(".video-container");
-            var videoIframe = document.querySelector(".video-iframe");
-            var videoSources = [
-                "https://www.youtube.com/embed/mH-yWX9SUWE",
-                "https://www.youtube.com/embed/VIDEO_ID_2",
-                "https://www.youtube.com/embed/WkRR796zbNk"
-            ];
-
-            videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
-            videoContainer.style.display = "block";
-        }
-    </script>
 </div>
 
 <!-- Footer -->
@@ -105,10 +90,17 @@
 <script src="../assets/js/util.js"></script>
 <script src="../assets/js/main.js"></script>
 <script>
-    function playVideo() {
+    function playVideo(videoNumber) {
         var videoContainer = document.querySelector(".video-container");
+        var videoIframe = document.querySelector(".video-iframe");
+        var videoSources = [
+            "https://www.youtube.com/embed/mH-yWX9SUWE",
+            "https://www.youtube.com/embed/VIDEO_ID_2",
+            "https://www.youtube.com/embed/WkRR796zbNk"
+        ];
+
+        videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
         videoContainer.style.display = "block";
-        document.querySelector(".video-iframe").src += "?autoplay=1";
     }
 </script>
 </body>
