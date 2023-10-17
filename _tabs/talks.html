@@ -16,7 +16,7 @@
 <!-- Header -->
 <header id="header">
     <div class="inner">
-        <a href="../index.html" class="image avatar"><img src="../images/profile.jpg" alt="" width: 100%; height: auto;/></a>
+        <a href="../index.html" class="image avatar"><img src="../images/profile.jpg" alt="" style="width: 100%; height: auto;"/></a>
         <h1><strong>Mark Giovinazzi</strong> (he/him/his)</h1>
         <br />
         <h5>PhD Candidate, University of Pennsylvania<br />
@@ -41,21 +41,21 @@
         <h2>Highlighted Talks</h2>
         <div class="row">
             <article class="col-6 col-12-xsmall work-item">
-                <a href="#" onclick="playVideo(1);">
+                <a href="#" onclick="playVideo(1, event);">
                     <img src="../images/talks/PennGrad.png" alt="Penn Grad Talks" style="max-width: 100%; height: auto;"/>
                 </a>
                 <h3>From Zero to Five Thousand: the Current Census of Exoplanets</h3>
                 <p>Penn Grad Talks, 2023</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-                <a href="#" onclick="playVideo(2);">
-                    <img src="../images/talks/AoT_talk.png" alt="Astronomy on Tap Talk"style="max-width: 100%; height: auto;" />
+                <a href="#" onclick="playVideo(2, event);">
+                    <img src="../images/talks/AoT_talk.png" alt="Astronomy on Tap Talk" style="max-width: 100%; height: auto;" />
                 </a>
                 <h3>Planetary Hide 'N Seek: Searching for the Galaxy's Most Elusive Worlds</h3>
                 <p>Astronomy on Tap, 2023</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-                <a href="#" onclick="playVideo(3);">
+                <a href="#" onclick="playVideo(3, event);">
                     <img src="../images/talks/The Exciting World of Exoplanets Cover.jpeg" alt="Your Third Talk" style="max-width: 100%; height: auto;" />
                 </a>
                 <h3>Your Third Talk</h3>
@@ -79,22 +79,20 @@
             "https://www.youtube.com/embed/VIDEO_ID_2",
             "https://www.youtube.com/embed/WkRR796zbNk"
         ];
-        
+
         videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
-        videoIframe.width = "max-width: 100%";
-        videoIframe.height = "auto";
+        videoIframe.style.width = "100%";
+        videoIframe.style.height = "auto";
         videoIframe.frameborder = "0";
         videoIframe.allowfullscreen = "true";
-        
+
         var clickedThumbnail = document.querySelector(".work-item:nth-child(" + videoNumber + ") a");
         var thumbnailParent = clickedThumbnail.parentNode;
-        
+
         // Remove the thumbnail image and replace it with the video iframe
         thumbnailParent.replaceChild(videoIframe, clickedThumbnail);
     }
     </script>
-
-
 </div>
 
 <!-- Footer -->
