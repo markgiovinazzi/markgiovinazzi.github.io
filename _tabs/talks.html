@@ -71,19 +71,36 @@
     </section>
 
     <script>
-        function playVideo(videoNumber) {
-            var videoContainer = document.querySelector(".video-container");
-            var videoIframe = document.querySelector(".video-iframe");
-            var videoSources = [
-                "https://www.youtube.com/embed/mH-yWX9SUWE",
-                "https://www.youtube.com/embed/mH-yWX9SUWE",
-                "https://www.youtube.com/embed/WkRR796zbNk"
-            ];
+    function playVideo(videoNumber) {
+        var videoIframe = document.createElement("iframe");
+        var videoSources = [
+            "https://www.youtube.com/embed/mH-yWX9SUWE",
+            "https://www.youtube.com/embed/VIDEO_ID_2",
+            "https://www.youtube.com/embed/WkRR796zbNk"
+        ];
+        
+        videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
+        videoIframe.width = "560";
+        videoIframe.height = "315";
+        videoIframe.frameborder = "0";
+        videoIframe.allowfullscreen = "true";
     
-            videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
-            videoContainer.style.display = "block";
-        }
+        var clickedThumbnail = document.querySelector(".work-item:nth-child(" + videoNumber + ") a");
+        var thumbnailParent = clickedThumbnail.parentNode;
+        
+        // Remove the thumbnail image and replace it with the video iframe
+        thumbnailParent.replaceChild(videoIframe, clickedThumbnail);
+    
+        // Hide the other thumbnails
+        var allThumbnails = document.querySelectorAll(".work-item a");
+        allThumbnails.forEach(function(thumbnail) {
+            if (thumbnail !== clickedThumbnail) {
+                thumbnail.style.display = "none";
+            }
+        });
+    }
     </script>
+
 
 </div>
 
