@@ -64,23 +64,14 @@
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 						</div>
+
             <div class="video-container" style="display: none;">
               <iframe class="video-iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
+            </div>     
 						<ul class="actions">
 							<li><a href="#" class="button">Full Portfolio</a></li>
 						</ul>
-					</section>
-
-
-          <script>
-          function playVideo() {
-          var videoContainer = document.getElementById("video-container");
-          videoContainer.style.display = "block";
-          document.getElementById("video-iframe").src += "?autoplay=1";
-          }
-          </script>
-        
+					</section>        
 			</div>
 
 		<!-- Footer -->
@@ -101,6 +92,13 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+      <script>
+          function playVideo() {
+          var videoContainer = document.getElementById("video-container");
+          videoContainer.style.display = "block";
+          document.getElementById("video-iframe").src += "?autoplay=1";
+          }
+          </script>
 
 	</body>
 </html>
