@@ -71,7 +71,8 @@
     </section>
 
     <script>
-    function playVideo(videoNumber) {
+    function playVideo(videoNumber, event) {
+        event.preventDefault(); // Prevent the default anchor behavior
         var videoIframe = document.createElement("iframe");
         var videoSources = [
             "https://www.youtube.com/embed/mH-yWX9SUWE",
@@ -80,11 +81,11 @@
         ];
         
         videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
-        videoIframe.width = "max-width: 100%";
+        videoIframe.width = "max-width: 150%";
         videoIframe.height = "auto";
         videoIframe.frameborder = "0";
         videoIframe.allowfullscreen = "true";
-    
+        
         var clickedThumbnail = document.querySelector(".work-item:nth-child(" + videoNumber + ") a");
         var thumbnailParent = clickedThumbnail.parentNode;
         
