@@ -80,8 +80,8 @@
         ];
         
         videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
-        videoIframe.width = "560";
-        videoIframe.height = "315";
+        videoIframe.width = "max-width: 100%";
+        videoIframe.height = "auto";
         videoIframe.frameborder = "0";
         videoIframe.allowfullscreen = "true";
     
@@ -90,14 +90,6 @@
         
         // Remove the thumbnail image and replace it with the video iframe
         thumbnailParent.replaceChild(videoIframe, clickedThumbnail);
-    
-        // Hide the other thumbnails
-        var allThumbnails = document.querySelectorAll(".work-item a");
-        allThumbnails.forEach(function(thumbnail) {
-            if (thumbnail !== clickedThumbnail) {
-                thumbnail.style.display = "none";
-            }
-        });
     }
     </script>
 
