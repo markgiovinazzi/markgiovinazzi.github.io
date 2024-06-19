@@ -41,14 +41,14 @@
         <h2>Highlighted Talks</h2>
         <div class="row">
             <article class="col-6 col-12-xsmall work-item">
-                <a href="#" onclick="playVideo(5, event);">
+                <a href="#" onclick="playVideo(1, event);">
                     <img src="../images/talks/KELT24_title.png" alt="Penn Grad Talks" style="max-width: 100%; height: auto;"/>
                 </a>
                 <h3>Trials and Tribulations in the Reanalysis of KELT-24 b: a Case Study for the Importance of Stellar Modeling</h3>
                 <p>Summary of a first-author paper describing the KELT-24 planetary system.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-                <a href="#" onclick="playVideo(1, event);">
+                <a href="#" onclick="playVideo(2, event);">
                     <img src="../images/talks/PennGrad.png" alt="Penn Grad Talks" style="max-width: 100%; height: auto;"/>
                 </a>
                 <h3>From Zero to Five Thousand: the Current Census of Exoplanets</h3>
@@ -62,14 +62,14 @@
                 <p>Astronomy on Tap, 2023</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-                <a href="#" onclick="playVideo(3, event);">
+                <a href="#" onclick="playVideo(4, event);">
                     <img src="../images/talks/The Exciting World of Exoplanets Cover.jpeg" alt="Public Science Talk" style="max-width: 100%; height: auto;" />
                 </a>
                 <h3>The Exciting World of Exoplanets</h3>
                 <p>A public science talk I have curated and delivered on several occasions to a wide raange of audiences.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-                <a href="#" onclick="playVideo(4, event);">
+                <a href="#" onclick="playVideo(5, event);">
                     <img src="../images/talks/precession.png" alt="The HD 217107 Planetary System" style="max-width: 100%; height: auto;" />
                 </a>
                 <h3>Th HD 217107 Planetary System: 20 Years of RV Measurements</h3>
@@ -86,11 +86,11 @@
         event.preventDefault(); // Prevent the default anchor behavior
         var videoIframe = document.createElement("iframe");
         var videoSources = [
+            "https://www.youtube.com/embed/ITWnv6bN6mk",
             "https://www.youtube.com/embed/mH-yWX9SUWE",
             "https://www.youtube.com/embed/mH-yWX9SUWE",
             "https://www.youtube.com/embed/WkRR796zbNk",
-            "https://player.vimeo.com/video/499866391?title=0&byline=0&portrait=0&playsinline=1&autopause=0&app_id=122963",
-            "https://www.youtube.com/embed/ITWnv6bN6mk"
+            "https://player.vimeo.com/video/499866391?title=0&byline=0&portrait=0&playsinline=1&autopause=0&app_id=122963"
         ];
 
         videoIframe.src = videoSources[videoNumber - 1] + "?autoplay=1";
